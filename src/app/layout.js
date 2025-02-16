@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar"; // Corrected import
 import CommonLayout from "@/components/CommonLayout"; // Corrected import
 import { ThemeProvider } from "@/components/ThemeProvider"; // Corrected import
+import CircleCursor from "@/components/CircleCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <CommonLayout>
+          <CircleCursor/>
             <Navbar /> {/* Ensure Navbar is included */}
             {children}
           </CommonLayout>

@@ -1,9 +1,23 @@
 'use client'
-import { useState } from 'react';
+import { useState,useRef } from 'react';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
 import SocialMedia from './SocialMedia';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 const ContactPage = () => {
+  const mainContainer = useRef()
+
+  useGSAP(()=>{
+    const tl = gsap.timeline()
+    // Main container animation
+    tl.from(mainContainer.current, {
+      opacity: -1,
+      duration: 1.3,
+      ease: 'power4.out'
+    })
+    
+  })
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,24 +35,24 @@ const ContactPage = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email Me",
-      value: "contact@yourportfolio.com",
-      action: () => navigator.clipboard.writeText("contact@yourportfolio.com"),
+      value: "sayyubchishty40@gmail.com",
+      action: () => window.location.href = "mailto:sayyubchishty40@gmail.com",
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Location",
-      value: "New Delhi, India",
+      value: "Dhanbad, India",
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Call Me",
-      value: "+91 98765 43210",
+      value: "+91 7368065632",
       action: () => window.location.href = "tel:+919876543210",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gadient-to-br from-gray-900 to-purple-900 text-white p-8">
+    <div ref={mainContainer} className="min-h-screen text-white p-8">
       <div className="max-w-6xl mx-auto relative z-20">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text ">
           Let's Connect.
@@ -56,7 +70,7 @@ const ContactPage = () => {
                   className="flex items-start space-x-4 p-4 rounded-xl bg-gray-700/20 hover:bg-gray-700/40 transition-all duration-300 cursor-pointer"
                   onClick={method.action}
                 >
-                  <div className="p-3 rounded-lg bg-purple-500/20 text-purple-400">
+                  <div className="p-3 rounded-lg ">
                     {method.icon}
                   </div>
                   <div>
@@ -88,7 +102,7 @@ const ContactPage = () => {
                 <input
                   type="text"
                   required
-                  className="w-full bg-gray-700/20 rounded-lg px-4 py-3 focus:ring-2 focus:ring-purple-500 focus:outline-none transition-all duration-300"
+                  className="w-full bg-gray-700/20 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all duration-300"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 />
@@ -101,7 +115,7 @@ const ContactPage = () => {
                 <input
                   type="email"
                   required
-                  className="w-full bg-gray-700/20 rounded-lg px-4 py-3 focus:ring-2 focus:ring-purple-500 focus:outline-none transition-all duration-300"
+                  className="w-full bg-gray-700/20 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all duration-300"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
@@ -114,7 +128,7 @@ const ContactPage = () => {
                 <textarea
                   rows="5"
                   required
-                  className="w-full bg-gray-700/20 rounded-lg px-4 py-3 focus:ring-2 focus:ring-purple-500 focus:outline-none transition-all duration-300"
+                  className="w-full bg-gray-700/20 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all duration-300"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 />
@@ -122,7 +136,7 @@ const ContactPage = () => {
 
               <button
                 type="submit"
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-lg flex items-center justify-center space-x-2 transition-all duration-300 hover:scale-105"
+                className="w-full bg-blue-600 text-white  hover:bg-blue-700  disabled:opacity-50 py-3 px-6 rounded-lg flex items-center justify-center space-x-2 transition-all duration-300 hover:scale-105"
               >
                 <Send className="w-5 h-5" />
                 <span>Send Message</span>
