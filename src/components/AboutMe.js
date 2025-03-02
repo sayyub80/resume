@@ -27,11 +27,11 @@ const AboutMe = () => {
 
   return (
     <div ref={mainContainer} className="min-h-screen  py-6 pl-6 md:px-10 w-[92vw] md:w-[60vw]">
-      <h1 className="text-4xl md:text-5xl font-bold md:text-center mb-12">
+      <h1 className=" text-4xl md:text-5xl font-bold  mb-12">
         About me.
       </h1>
       {/* Education Section */}
-      <section className="relative z-10 max-w-4xl mx-auto mb-20">
+      <section className="text-gray-300 relative z-10 max-w-4xl mx-auto mb-20">
         <h2 className=" text-2xl md:text-3xl font-bold mb-8 ">Education</h2>
 
         <div className="relative ">
@@ -54,7 +54,7 @@ const AboutMe = () => {
       </section>
 
       {/* Tech I Learned Section */}
-      <section className="relative z-10  max-w-4xl mx-auto mb-20">
+      <section className="text-gray-300  relative z-10  max-w-4xl mx-auto mb-20">
         <h2 className="text-2xl md:text-3xl font-bold mb-8">
           Tech I've Learned
         </h2>

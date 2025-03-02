@@ -11,6 +11,10 @@ import { useGSAP } from "@gsap/react";
 export default function Projects() {
   const card = useRef();
   const mainContainer = useRef();
+  const [showAllProjects, setShowAllProjects] = useState(true);
+
+  // Filter projects based on the current state
+  const filteredProjects = showAllProjects ? projects : projects.filter(project => project.currentlyWorking);
 
   useGSAP(() => {
     // Main container animation
@@ -41,16 +45,37 @@ export default function Projects() {
   });
 
   return (
-    <div ref={mainContainer} className="min-h-screen  bg-gray-90 text-white   py-6 pl-6 md:px-10 w-[92vw] md:w-[60vw]">
-      <h1 className="text-4xl font-bold text-center mb-12">My Projects.</h1>
+    <div ref={mainContainer} className="min-h-screen bg-gray-90 text-white py-6 pl-6 md:px-10 w-[92vw] md:w-[60vw]">
+      <h1 className="text-4xl md:text-5xl font-bold  mb-6">Projects.</h1>
+
+      {/* Buttons for filtering projects */}
+      <div className="flex md:justify-center space-x-4 mb-12">
+       
+        <button
+          onClick={() => setShowAllProjects(true)}
+          className={`text-sm md:text-[16px] px-4 md:px-6 py-2 rounded font-semibold transition-colors ${
+            showAllProjects ? 'bg-blue-500 text-white' : 'bg-gray-700 text-gray-300'
+          }`}
+        >
+          All Projects
+        </button>
+        <button
+          onClick={() => setShowAllProjects(false)}
+          className={` px-4 text-sm md:text-[16px] md:px-6 md:py-2 rounded font-semibold transition-colors ${
+            !showAllProjects ? 'bg-blue-500 text-white' : 'bg-gray-700 text-gray-300'
+          }`}
+        >
+          In Progress
+        </button>
+      </div>
 
       {/* Grid Layout */}
-      <div className=" relative z-10 grid grid-cols-12 gap-6 auto-rows-[minmax(100px, auto)] min-h-[100vh]">
-        {projects.map((project, index) => (
+      <div className="relative z-10 grid grid-cols-12 gap-6 auto-rows-[minmax(100px, auto)] min-h-[100vh]">
+        {filteredProjects.map((project, index) => (
           <div
             key={index}
-            className={`min-h-96 relative card group rounded-xl overflow-hidden col-span-12 md:col-span-6 ${
-              index/2 === 0 ? "md:row-span-5" : // First card spans 5 rows
+            className={`h-96 relative card group rounded-xl overflow-hidden col-span-12 md:col-span-6 ${
+              index / 2 === 0 ? "md:row-span-5" : // First card spans 5 rows
               index === 1 ? "md:row-span-7" : // Second card spans 7 rows
               index === 2 ? "md:row-span-7" : // Third card spans 7 rows
               "md:row-span-5" // Fourth card spans 5 rows

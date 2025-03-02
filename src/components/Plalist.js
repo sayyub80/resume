@@ -4,7 +4,7 @@ import {playlists} from '@/lib/common'
 function Plalist() {
   return (
     <>
-       <section className="relative z-10 max-w-4xl mx-auto mb-20">
+       <section className="text-gray-300  relative z-10 max-w-4xl mx-auto mb-20">
         <h2 className=" text-2xl md:text-3xl font-bold mb-8 ">My Playlist</h2>
 
         <div className="relative ">

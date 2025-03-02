@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { navLinks } from '../lib/common';
 import gsap from "gsap";
+import { AlignLeft , AlignRight } from "lucide-react";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -59,28 +60,20 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button onClick={toggleMobileMenu} className="text-white focus:outline-none">
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              </svg>
+            <AlignRight />
             </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-black/90 backdrop-blur-md w-full py-4">
-            <div className="flex flex-col space-y-4 px-4">
+          <div className="fixed flex flex-col justify-center items-center  top-0 left-0 md:hidden min-h-screen w-[100vw] bg-black">
+            <div className=" right-7 top-14 absolute md:hidden">
+            <button onClick={toggleMobileMenu} className="text-white focus:outline-none">
+            <AlignLeft /> 
+            </button>
+          </div>
+            <div className="flex flex-col gap-10 space-y-4 px-4">
               {navLinks.map((link, index) => (
                 <div key={index} className="relative">
                   <Link

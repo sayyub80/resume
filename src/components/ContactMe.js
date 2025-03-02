@@ -104,7 +104,7 @@ const ContactMe = () => {
                   <div className="p-3 rounded-lg ">{method.icon}</div>
                   <div>
                     <h3 className="font-semibold md:text-[15px] text-[14px] text-gray-300">{method.title}</h3>
-                    <p className="text-[10px] md:text-sm text-gray-400">{method.value}</p>
+                    <p className="text-[10px] font-semibold md:text-sm text-gray-400">{method.value}</p>
                   </div>
                 </div>
               ))}

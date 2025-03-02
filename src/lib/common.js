@@ -1,44 +1,47 @@
 export const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Projects", path: "/projects" },
     { name: "About", path: "/about" },
+    { name: "Projects", path: "/projects" },
+    { name: "Resume", path: "/resume" },
     { name: "Contact", path: "/contact" },
   ];
 
   export const projects = [
     {
       id: 1,
-      src:'https://jobsco-ten.vercel.app/',
+      src: 'https://jobsco-ten.vercel.app/',
       title: "Job Portal",
       description: "A job search platform connecting employers and job seekers with advanced filtering and matching algorithms.",
-      tech: ["nextjs", "nodejs", "mongodb", "tailwind","clerk"],
+      tech: ["nextjs", "nodejs", "mongodb", "tailwind", "clerk"],
       video: "/jobsco/video.mp4",
+      currentlyWorking: true, // Currently working on this project
     },
     {
       id: 2,
-      src:'https://netflixgpt-a27ae.web.app/',
+      src: 'https://netflixgpt-a27ae.web.app/',
       title: "NetflixGPT",
       description: "A Netflix-like streaming platform with AI integration for personalized recommendations and content discovery.",
       tech: ["react", "nodejs", "firebase", "ai"],
       video: "/netflix/video.mp4",
+      currentlyWorking: false, // Not currently working on this project
     },
-    
     {
       id: 3,
-      src:'https://shadechat-nu.vercel.app/',
+      src: 'https://shadechat-nu.vercel.app/',
       title: "ShadeChat",
       description: "A platform for anonymous chatting with end-to-end encryption and privacy-focused features.",
-      tech: ["Nextjs", "mongodb", "NextAuth","GeminiAi"],
+      tech: ["Nextjs", "mongodb", "NextAuth", "GeminiAi"],
       video: "/shadchat/video.mp4",
+      currentlyWorking: false, // Currently working on this project
     },
-    
     {
       id: 4,
-      src:'/projects',
+      src: '/projects',
       title: "Imaginify",
       description: "A photo editor with AI-powered features for enhancing and transforming images.",
       tech: ["Nextjs", "nodejs", "tailwind", "cloudinary"],
       video: "/Imaginify/video.mp4",
+      currentlyWorking: false, // Not currently working on this project
     },
   ];
   
@@ -132,19 +135,6 @@ export const Educations=[
 
 
 
-export const LogoUrl=[
-    [
-     'https://cdn3d.iconscout.com/3d/free/thumb/free-html-5728485-4781249.png', 
-     'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_1080,q_100,w_1080/v1/gcs/platform-data-dsc/events/css-beginners-tutorial.jpg', 
-     'https://www.chloros.in/images/techLogo12.png', 
-     'https://th.bing.com/th/id/OIP.1ji9NLQl3sOXktSoEYnt3wHaHa?rs=1&pid=ImgDetMain'
-    ],
-    [ 'https://th.bing.com/th/id/OIP.290Zrd7jUMmV94wZhwmjkAHaEv?rs=1&pid=ImgDetMain', 
-      'https://www.chloros.in/images/techLogo19.png',
-      'https://th.bing.com/th/id/R.f81a6f373c244b1f70f4b7402b5ab372?rik=rbXh4ieLuKt%2bmA&riu=http%3a%2f%2flogos-download.com%2fwp-content%2fuploads%2f2016%2f09%2fReact_logo_logotype_emblem.png&ehk=QhGOkKcUKCU7FBQgHOajOiJqJBACUTD2Ni6LsfqzCEA%3d&risl=&pid=ImgRaw&r=0',
-      'https://www.chloros.in/images/techLogo12.1.png'
-    ]
 
-]
 
 
