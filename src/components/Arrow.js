@@ -16,7 +16,7 @@ function Arrow({ destination, text }) {
     });
   });
   return (
-    <div>
+    <div >
       <Link href={`${destination}`}>
         <div>
           <div className=" relative z-20 flex next mt-8 pt-4 text-gray-300">

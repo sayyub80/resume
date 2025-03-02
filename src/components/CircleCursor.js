@@ -105,12 +105,12 @@ const CircleCursor = () => {
     <>
       <div
         ref={innerCircleRef}
-        className="fixed w-2 h-2 bg-red-500 rounded-full pointer-events-none z-50 mix-blend-difference"
+        className="hidden md:block fixed w-2 h-2 bg-red-500 rounded-full pointer-events-none z-50 mix-blend-difference"
         style={{ left: 0, top: 0 }}
       />
       <div
         ref={outerCircleRef}
-        className="fixed w-8 h-8 border-2 border-[#97badd] rounded-full pointer-events-none z-50 mix-blend-difference"
+        className="hidden md:block fixed w-8 h-8 border-2 border-[#97badd] rounded-full pointer-events-none z-50 mix-blend-difference"
         style={{ left: 0, top: 0 }}
       />
     </>

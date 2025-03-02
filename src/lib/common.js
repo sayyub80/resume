@@ -8,35 +8,37 @@ export const navLinks = [
   export const projects = [
     {
       id: 1,
-      src:'/projects',
-      title: "Imaginify",
-      description: "A photo editor with AI-powered features for enhancing and transforming images.",
-      tech: ["react", "nodejs", "tailwind", "ai"],
-      images: ["https://minimal-portfolio-swart.vercel.app/p3.svg", "https://minimal-portfolio-swart.vercel.app/p2.svg"],
+      src:'https://jobsco-ten.vercel.app/',
+      title: "Job Portal",
+      description: "A job search platform connecting employers and job seekers with advanced filtering and matching algorithms.",
+      tech: ["nextjs", "nodejs", "mongodb", "tailwind","clerk"],
+      video: "/jobsco/video.mp4",
     },
     {
       id: 2,
-      src:'/projects',
-      title: "ShadeChat",
-      description: "A platform for anonymous chatting with end-to-end encryption and privacy-focused features.",
-      tech: ["flutter", "firebase", "encryption"],
-      images: ["/shadechat-1.jpg", "/shadechat-2.jpg"],
+      src:'https://netflixgpt-a27ae.web.app/',
+      title: "NetflixGPT",
+      description: "A Netflix-like streaming platform with AI integration for personalized recommendations and content discovery.",
+      tech: ["react", "nodejs", "firebase", "ai"],
+      video: "/netflix/video.mp4",
     },
+    
     {
       id: 3,
-      src:'/projects',
-      title: "Job Portal",
-      description: "A job search platform connecting employers and job seekers with advanced filtering and matching algorithms.",
-      tech: ["nextjs", "nodejs", "mongodb", "tailwind"],
-      images: ["/jobportal-1.jpg", "/jobportal-2.jpg"],
+      src:'https://shadechat-nu.vercel.app/',
+      title: "ShadeChat",
+      description: "A platform for anonymous chatting with end-to-end encryption and privacy-focused features.",
+      tech: ["Nextjs", "mongodb", "NextAuth","GeminiAi"],
+      video: "/shadchat/video.mp4",
     },
+    
     {
       id: 4,
       src:'/projects',
-      title: "NetflixGPT",
-      description: "A Netflix-like streaming platform with AI integration for personalized recommendations and content discovery.",
-      tech: ["https://res.cloudinary.com/practicaldev/image/fetch/s--qo_Wp38Z--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/e0nl7ziy1la7bpwj7rsp.png", "https://th.bing.com/th/id/OIP.290Zrd7jUMmV94wZhwmjkAHaEv?rs=1&pid=ImgDetMain", "https://pc-tablet.com/wp-content/uploads/2023/12/gemini-logo.webp", "https://sujanbyanjankar.com.np/wp-content/uploads/2018/09/firebase_logo_shot.png"],
-      images: ["https://www.whats-on-netflix.com/wp-content/uploads/2024/05/netflix-app-on-windows-getting-major-refresh.jpg", "https://assets.nflxext.com/ffe/siteui/vlv3/fb5cb900-0cb6-4728-beb5-579b9af98fdd/web/IN-en-20250127-TRIFECTA-perspective_cf66f5a3-d894-4185-9106-5f45502fc387_medium.jpg"],
+      title: "Imaginify",
+      description: "A photo editor with AI-powered features for enhancing and transforming images.",
+      tech: ["Nextjs", "nodejs", "tailwind", "cloudinary"],
+      video: "/Imaginify/video.mp4",
     },
   ];
   
@@ -88,7 +90,8 @@ export const techArray=[
      'https://www.chloros.in/images/techLogo22.png', 
      'https://www.chloros.in/images/techLogo12.1.png', 
      'https://cdn.buttercms.com/r4cBwvNJQLC4sf8RzKEO', 
-     'https://logowik.com/content/uploads/images/tailwind-css7675.logowik.com.webp']
+     'https://logowik.com/content/uploads/images/tailwind-css7675.logowik.com.webp'
+     ]
 
 export const Educations=[
     {

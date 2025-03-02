@@ -12,7 +12,7 @@ import Heading from "./Heading";
 
 
 
-export function Hero() {
+export default function Hero() {
   useGSAP(()=>{
     const t1=gsap.timeline()
     t1.from('.heading',{
@@ -67,7 +67,7 @@ export function Hero() {
 </p>
 <Arrow destination={'/about'} text="See More About Me."/>
  <div className='Social'><SocialMedia/></div>
-<div className='text-[12rem] cursor-default font-title opacity-[0.02] left-0 font-extrabold fixed bottom-0 -z-1'>SA.</div>
+<div className='text-[6rem] md:text-[12rem] cursor-default font-title opacity-[0.02] left-0 font-extrabold fixed bottom-20 md:bottom-0 -z-1'>SA.</div>
 </div>  
   );
 }

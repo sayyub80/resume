@@ -37,25 +37,25 @@ export default function ResumeViewer() {
   };
 
   return (
-    <div ref={mainContainer} className='w-[60vw]'>
-    <h1 className="text-4xl md:text-5xl font-bold  mb-6  ">Resume.</h1>
-    <div className=" min-h-screen bg-gray-100 p-4">
+    <div ref={mainContainer} className='pl-7 w-[92vw] md:w-[60vw]'>
+    <h1 className="text-4xl md:text-5xl font-bold  mb-6">Resume.</h1>
+    <div className=" md:min-h-screen bg-gray-100 p-4">
       <div className="relative ">
         {/* resume Viewer */}
-        <div className="h-[100vh] overflow-auto">
+        <div className="md:h-[100vh] overflow-auto">
           <img src='/resume1.svg'></img>
         </div>
 
         {/* Download Button */}
         <div className="">
-          <div className="max-w-4xl mx-auto pt-2 flex justify-end">
+          <div className="max-w-4xl mx-auto md:pt-2 flex justify-end">
             <button
               onClick={handleDownload}
               disabled={isLoading}
-              className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all disabled:opacity-50"
+              className="flex items-center gap-2 mt-2  px-2 md:px-6 py-1 md:py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all disabled:opacity-50"
             >
-              <Download className="w-5 h-5" />
-              {isLoading ? 'Downloading...' : 'Download PDF'}
+              <Download className="w-5 h-5 " />
+              {isLoading ? 'Downloading...' : 'Download'}
             </button>
           </div>
         </div>
@@ -63,10 +63,10 @@ export default function ResumeViewer() {
      
     </div>
     <div className="mt-9">
-         <h3 className="text-3xl font-bold my-2">
+         <h3 className="text-xl md:text-3xl font-bold my-2">
            Let's Create Something Extraordinary
          </h3>
-         <p className="text-sm text-gray-300 mb-8 w-3/4">
+         <p className="text-[11px] md:text-sm text-gray-300 mb-8 w-3/4">
            If my work resonates with you and you're looking for a passionate
            developer to bring your ideas to life, I'd love to hear from you.
            Whether it's a potential project, collaboration opportunity, or even
@@ -76,7 +76,7 @@ export default function ResumeViewer() {
        </div>
   <Arrow destination={'/contact'} text="Are you convinced to contact me now?"/>
 
-  <div className='text-[12rem] font-title opacity-[0.03] -left-[18.5rem] bottom-52 font-extrabold fixed  -z-1 rotate-90'>Resume.</div>
+  <div className='text-[5rem] md:text-[12rem] font-title opacity-[0.03] left-0 md:-left-[18.5rem] bottom-20 md:bottom-52 font-extrabold fixed  -z-1 md:rotate-90'>Resume.</div>
     </div>
     
   );
