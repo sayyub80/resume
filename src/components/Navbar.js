@@ -76,9 +76,9 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className=" fixed flex flex-col justify-center items-center  top-0 left-0 md:hidden min-h-screen w-[100vw] bg-black">
-            <div className=" right-7 top-14 absolute md:hidden">
+            <div className=" right-8 top-16 sm:right-16 absolute md:hidden">
             <button onClick={toggleMobileMenu} className="text-white focus:outline-none">
-             <img className=" w-5" src="/cross.png"></img>
+             <img className=" w-[22px]" src="/cross.png"></img>
             </button>
           </div>
             <div className="flex flex-col gap-10 space-y-4 px-4">

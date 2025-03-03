@@ -81,7 +81,7 @@ export default function Projects() {
               "md:row-span-5" // Fourth card spans 5 rows
             }`}
           >
-            <Link href={project.src}>
+            <Link target="_blank" href={project.src}>
               {/* Background Video */}
               <video
                 autoPlay
@@ -94,7 +94,7 @@ export default function Projects() {
               </video>
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <div className="absolute inset-0 bg-black bg-opacity-50 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                 <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
                 <p className="text-sm">{project.description}</p>
                 <div className="flex space-x-1 mt-4">
