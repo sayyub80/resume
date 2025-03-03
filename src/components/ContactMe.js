@@ -193,7 +193,7 @@ const ContactMe = () => {
         </div>
       </div>
 
-      <div className="text-[5rem] md:text-[12rem] font-title opacity-[0.03] left-0 font-extrabold fixed bottom-10 md:bottom-0 -z-1">
+      <div className="text-[5rem] sm:text-[8rem] md:text-[12rem] font-title opacity-[0.03] left-0 font-extrabold fixed bottom-10 sm:bottom-0 -z-1">
         Contact Me.
       </div>
     </div>

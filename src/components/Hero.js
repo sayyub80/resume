@@ -67,7 +67,7 @@ export default function Hero() {
 </p>
 <Arrow destination={'/about'} text="See More About Me."/>
  <div className='Social'><SocialMedia/></div>
-<div className='text-[6rem] md:text-[12rem] cursor-default font-title opacity-[0.02] left-0 font-extrabold fixed bottom-20 md:bottom-0 -z-1'>SA.</div>
+<div className='text-[6rem] sm:text-[8rem] md:text-[12rem] cursor-default font-title opacity-[0.02] left-0 font-extrabold fixed bottom-20  sm:bottom-0 -z-1'>SA.</div>
 </div>  
   );
 }

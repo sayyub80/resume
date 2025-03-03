@@ -1,12 +1,18 @@
 'use client'
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useRef, useState,useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { navLinks } from '../lib/common';
 import gsap from "gsap";
 import { AlignLeft , AlignRight } from "lucide-react";
+import {useTheme} from 'next-themes'
+
 
 const Navbar = () => {
+  const {setTheme} = useTheme()
+  useEffect(()=>{
+   setTheme("dark")
+  },[])
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const router = useRouter(); // Get the router instance
 
@@ -53,24 +59,26 @@ const Navbar = () => {
                   {link.name}
                   <span className="absolute left-[50%] w-0 -translate-x-[50%] top-5 h-[2px] bg-white"></span>
                 </Link>
+                
               </div>
             ))}
+            
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button onClick={toggleMobileMenu} className="text-white focus:outline-none">
-            <AlignRight />
+            <img className="w-5" src="/menu.png" />
             </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="fixed flex flex-col justify-center items-center  top-0 left-0 md:hidden min-h-screen w-[100vw] bg-black">
+          <div className=" fixed flex flex-col justify-center items-center  top-0 left-0 md:hidden min-h-screen w-[100vw] bg-black">
             <div className=" right-7 top-14 absolute md:hidden">
             <button onClick={toggleMobileMenu} className="text-white focus:outline-none">
-            <AlignLeft /> 
+             <img className=" w-5" src="/cross.png"></img>
             </button>
           </div>
             <div className="flex flex-col gap-10 space-y-4 px-4">

@@ -43,7 +43,7 @@ export default function ResumeViewer() {
       <div className="relative ">
         {/* resume Viewer */}
         <div className="md:h-[100vh] overflow-auto">
-          <img src='/resume1.svg'></img>
+          <img src='/resume.svg'></img>
         </div>
 
         {/* Download Button */}
@@ -76,7 +76,7 @@ export default function ResumeViewer() {
        </div>
   <Arrow destination={'/contact'} text="Are you convinced to contact me now?"/>
 
-  <div className='text-[5rem] md:text-[12rem] font-title opacity-[0.03] left-0 md:-left-[18.5rem] bottom-20 md:bottom-52 font-extrabold fixed  -z-1 md:rotate-90'>Resume.</div>
+  <div className='text-[5rem] sm:text-[8rem] md:text-[12rem] font-title opacity-[0.03] left-0 md:-left-[18.5rem] bottom-20 sm:bottom-0 md:bottom-52 font-extrabold fixed  -z-1 md:rotate-90'>Resume.</div>
     </div>
     
   );

@@ -111,7 +111,7 @@ export default function Projects() {
       </div>
       <Arrow destination={'/resume'} text="Let's Go To My Resume." />
 
-      <div className='text-[5rem] md:text-[12rem] font-title opacity-[0.03] left-0 font-extrabold fixed md:bottom-0 bottom-20 -z-1'>Projects.</div>
+      <div className='text-[5rem]  sm:text-[8rem] md:text-[12rem] font-title opacity-[0.03] left-0 font-extrabold fixed sm:bottom-0 bottom-20 -z-1'>Projects.</div>
     </div>
   );
 }
